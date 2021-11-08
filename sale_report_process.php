@@ -25,7 +25,7 @@ $results = '';
   }
 ?>
 <!doctype html>
-<html lang="en-US">
+<html lang="es">
  <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
    <title>Reporte de ventas</title>
