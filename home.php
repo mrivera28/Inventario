@@ -11,8 +11,8 @@
  <div class="col-md-12">
     <div class="panel">
       <div class="jumbotron text-center">
-         <h1>Esta es su nueva página de inicio</h1>
-     
+         <h1>Bienvenido</h1>
+         <img src="libs/images/logo.jpg">
       </div>
     </div>
  </div>
