@@ -13,7 +13,7 @@ if(empty($errors)){
     //Update Sign in time
      updateLastLogIn($user_id);
      $session->msg("s", "Bienvenido a AZIZA PERÚ.");
-     redirect('home.php',false);
+     redirect('admin.php',false);
 
   } else {
     $session->msg("d", "Nombre de usuario y/o contraseña incorrecto.");

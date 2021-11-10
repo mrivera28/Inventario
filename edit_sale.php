@@ -21,7 +21,7 @@ if(!$sale){
           $p_id      = $db->escape((int)$product['id']);
           $s_qty     = $db->escape((int)$_POST['quantity']); 
            if(!(is_numeric ($s_qty))){
-            $session->msg('s',"¡ esto no es un valor numerico !.");
+            $session->msg('s',"¡No es un valor numérico!");
             redirect('edit_sale.php?id='.(int)$sale['id'],false);
           }
 
@@ -35,10 +35,10 @@ if(!$sale){
           $result = $db->query($sql);
           if( $result && $db->affected_rows() === 1){
                     update_product_qty($s_qty,$p_id);
-                    $session->msg('s',"¡ Venta Actualizada !.");
+                    $session->msg('s',"¡Venta Actualizada!");
                     redirect('edit_sale.php?id='.$sale['id'], false);
                   } else {
-                    $session->msg('d',' ¡No se actualizó ningún campo en la venta !');
+                    $session->msg('d',' ¡No se actualizó ningún campo en la venta!');
                     redirect('sales.php', false);
                   }
         } else {
@@ -64,18 +64,18 @@ if(!$sale){
         <span>All Sales</span>
      </strong>
      <div class="pull-right">
-       <a href="sales.php" class="btn btn-primary">Show all sales</a>
+       <a href="sales.php" class="btn btn-primary">Mostrar todas las ventas</a>
      </div>
     </div>
     <div class="panel-body">
        <table class="table table-bordered">
          <thead>
-          <th> Product title </th>
-          <th> Qty </th>
-          <th> Price </th>
+          <th> Nombre del producto </th>
+          <th> Cantidad </th>
+          <th> Precio </th>
           <th> Total </th>
-          <th> Date</th>
-          <th> Action</th>
+          <th> Fecha </th>
+          <th> Acciones </th>
          </thead>
            <tbody  id="product_info">
               <tr>
