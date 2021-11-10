@@ -38,7 +38,7 @@ if(!$sale){
                     $session->msg('s',"¡ Venta Actualizada !.");
                     redirect('edit_sale.php?id='.$sale['id'], false);
                   } else {
-                    $session->msg('d',' ¡ No se actualizo ningun campo en la Venta !');
+                    $session->msg('d',' ¡No se actualizó ningún campo en la venta !');
                     redirect('sales.php', false);
                   }
         } else {

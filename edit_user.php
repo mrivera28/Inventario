@@ -51,10 +51,10 @@ if(isset($_POST['update-pass'])) {
           $sql = "UPDATE users SET password='{$h_pass}' WHERE id='{$db->escape($id)}'";
        $result = $db->query($sql);
         if($result && $db->affected_rows() === 1){
-          $session->msg('s',"Se ha actualizado la contraseña del usuario. ");
+          $session->msg('s',"Se actualizó la contraseña del usuario. ");
           redirect('edit_user.php?id='.(int)$e_user['id'], false);
         } else {
-          $session->msg('d','¡ No se pudo actualizar la contraseña de usuario !');
+          $session->msg('d','¡No se pudo actualizar la contraseña de usuario!');
           redirect('edit_user.php?id='.(int)$e_user['id'], false);
         }
   } else {

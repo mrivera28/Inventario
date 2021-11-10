@@ -11,7 +11,7 @@
  <div class="col-md-12">
     <div class="panel">
       <div class="jumbotron text-center">
-         <h1>Bienvenido</h1>
+         <h1>Sistema de Inventario</h1>
          <img src="libs/images/logo.jpg">
       </div>
     </div>

@@ -31,7 +31,7 @@
           redirect('edit_group.php?id='.(int)$e_group['id'], false);
         } else {
           //failed
-          $session->msg('d','¡ No se ha actualizado ningun campo, Validar !');
+          $session->msg('d','¡No se actualizó ningún campo, validar!');
           redirect('edit_group.php?id='.(int)$e_group['id'], false);
         }
    } else {

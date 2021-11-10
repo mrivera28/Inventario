@@ -12,7 +12,7 @@ $user = current_user();
            echo ucfirst($user['name']);
             else echo "Sistema simple de inventario";?>
     </title>
-	
+	  <link rel=icon type="image/jpg" href="libs/images/icon.jpg">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
     <link rel="stylesheet" href="libs/css/main.css" />
@@ -20,11 +20,15 @@ $user = current_user();
   <body>
   <?php  if ($session->isUserLoggedIn(true)): ?>
     <header id="header">
-      <div class="logo pull-left"> INVENTARIO - AZIZA PERÚ</div>
-      <div class="header-content">
-      <div class="header-date pull-left">
-        <!--<strong><?php echo date("d/m/Y  g:i a");?></strong>-->
+      <div class="logo pull-left"> 
+        <img src="libs/images/logo.jpg" style="width: 140px">
       </div>
+      <div class="header-content">
+        
+      <div class="header-date pull-left">
+        <strong><?php echo date("d/m/Y  g:i a");?></strong>
+      </div>
+      
       <div class="pull-right clearfix">
         <ul class="info-menu list-inline list-unstyled">
           <li class="profile">
