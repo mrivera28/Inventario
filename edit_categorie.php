@@ -26,7 +26,7 @@ if(isset($_POST['edit_cat'])){
        $session->msg("s", "Categoría actualizada con éxito.");
        redirect('categorie.php',false);
      } else {
-       $session->msg("d", "Lo siento, actualización falló.");
+       $session->msg("d", "¡ No se actualizo ningun campo en Categoria !");
        redirect('categorie.php',false);
      }
   } else {
@@ -52,7 +52,7 @@ if(isset($_POST['edit_cat'])){
        <div class="panel-body">
          <form method="post" action="edit_categorie.php?id=<?php echo (int)$categorie['id'];?>">
            <div class="form-group">
-               <input type="text" class="form-control" name="categorie-name" value="<?php echo remove_junk(ucfirst($categorie['name']));?>">
+               <input type="name" class="form-control" name="categorie-name" value="<?php echo remove_junk(ucfirst($categorie['name']));?>">
            </div>
            <button type="submit" name="edit_cat" class="btn btn-primary">Actualizar categoría</button>
        </form>

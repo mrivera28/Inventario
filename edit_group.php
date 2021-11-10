@@ -31,7 +31,7 @@
           redirect('edit_group.php?id='.(int)$e_group['id'], false);
         } else {
           //failed
-          $session->msg('d','Lamentablemente no se ha actualizado el grupo!');
+          $session->msg('d','¡ No se ha actualizado ningun campo, Validar !');
           redirect('edit_group.php?id='.(int)$e_group['id'], false);
         }
    } else {
@@ -53,7 +53,7 @@
         </div>
         <div class="form-group">
               <label for="level" class="control-label">Nivel del grupo</label>
-              <input type="number" class="form-control" name="group-level" value="<?php echo (int)$e_group['group_level']; ?>">
+              <input type="number" min=1 max=4 class="form-control" name="group-level" value="<?php echo (int)$e_group['group_level']; ?>">
         </div>
         <div class="form-group">
           <label for="status">Estado</label>

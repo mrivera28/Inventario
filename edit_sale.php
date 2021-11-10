@@ -19,7 +19,12 @@ if(!$sale){
     validate_fields($req_fields);
         if(empty($errors)){
           $p_id      = $db->escape((int)$product['id']);
-          $s_qty     = $db->escape((int)$_POST['quantity']);
+          $s_qty     = $db->escape((int)$_POST['quantity']); 
+           if(!(is_numeric ($s_qty))){
+            $session->msg('s',"¡ esto no es un valor numerico !.");
+            redirect('edit_sale.php?id='.(int)$sale['id'],false);
+          }
+
           $s_total   = $db->escape($_POST['total']);
           $date      = $db->escape($_POST['date']);
           $s_date    = date("Y-m-d", strtotime($date));
@@ -30,10 +35,10 @@ if(!$sale){
           $result = $db->query($sql);
           if( $result && $db->affected_rows() === 1){
                     update_product_qty($s_qty,$p_id);
-                    $session->msg('s',"Sale updated.");
+                    $session->msg('s',"¡ Venta Actualizada !.");
                     redirect('edit_sale.php?id='.$sale['id'], false);
                   } else {
-                    $session->msg('d',' Sorry failed to updated!');
+                    $session->msg('d',' ¡ No se actualizo ningun campo en la Venta !');
                     redirect('sales.php', false);
                   }
         } else {
@@ -80,13 +85,13 @@ if(!$sale){
                   <div id="result" class="list-group"></div>
                 </td>
                 <td id="s_qty">
-                  <input type="text" class="form-control" name="quantity" value="<?php echo (int)$sale['qty']; ?>">
+                  <input type="number" min=1 class="form-control" name="quantity" value="<?php echo (int)$sale['qty']; ?>">
                 </td>
                 <td id="s_price">
-                  <input type="text" class="form-control" name="price" value="<?php echo remove_junk($product['sale_price']); ?>" >
+                  <input type="number" min=0 class="form-control" name="price" value="<?php echo remove_junk($product['sale_price']); ?>" >
                 </td>
                 <td>
-                  <input type="text" class="form-control" name="total" value="<?php echo remove_junk($sale['price']); ?>">
+                  <input type="number" min=0 class="form-control" name="total" value="<?php echo remove_junk($sale['price']); ?>" >
                 </td>
                 <td id="s_date">
                   <input type="date" class="form-control datepicker" name="date" data-date-format="" value="<?php echo remove_junk($sale['date']); ?>">
@@ -106,3 +111,4 @@ if(!$sale){
 </div>
 
 <?php include_once('layouts/footer.php'); ?>
+

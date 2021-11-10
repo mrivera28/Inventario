@@ -54,7 +54,7 @@ if(isset($_POST['update-pass'])) {
           $session->msg('s',"Se ha actualizado la contraseña del usuario. ");
           redirect('edit_user.php?id='.(int)$e_user['id'], false);
         } else {
-          $session->msg('d','No se pudo actualizar la contraseña de usuario..');
+          $session->msg('d','¡ No se pudo actualizar la contraseña de usuario !');
           redirect('edit_user.php?id='.(int)$e_user['id'], false);
         }
   } else {
