@@ -41,7 +41,7 @@
  }
 ?>
 <?php include_once('layouts/header.php'); ?>
-<div class="login-page">
+<div class="login-page" style="margin: 0 auto">
     <div class="text-center">
        <h3>Editar Grupo</h3>
      </div>

@@ -6,14 +6,17 @@
 <?php include_once('layouts/header.php'); ?>
 
 <div class="row">
-<div class="contenedor-mayor">
-  <div class="col-md-6">
-<div class="contenedor-logo">
-<img src="libs/images/fotito_sin_fondo.png" style="width: 70%; height: 50%">
-</div>
-</div>
+  <div class="contenedor-mayor">
+    <div class="col-md-6">
+      <div class="contenedor-logo">
+        <img src="libs/images/fotito_sin_fondo.png" style="width: 60%; height: 50%">
+      </div>
+    </div>
+  </div>
+
+
 <div class="col-md-6">
-<div class="login-page">
+  <div class="login-page">
 
     <div class="text-center">
        <h1>Bienvenido</h1>
@@ -32,9 +35,10 @@
         <div class="form-group">
                 <button type="submit" class="btn btn-info  pull-right">Entrar</button>
         </div>
-    </form>
+      </form>
     </div>
+  </div>
 </div>
-</div>
+
 </div>
 <?php include_once('layouts/footer.php'); ?>

@@ -111,7 +111,7 @@ $results = '';
          <tr class="text-right">
            <td colspan="4"></td>
            <td colspan="1"> Total </td>
-           <td> $
+           <td> S/
            <?php echo number_format(@total_price($results)[0], 2);?>
           </td>
          </tr>
