@@ -72,7 +72,7 @@ if(!$product){
                   <span class="input-group-addon">
                    <i class="glyphicon glyphicon-th-large"></i>
                   </span>
-                  <input type="text" class="form-control" name="product-title" value="<?php echo remove_junk($product['name']);?>">
+                  <input type="text" pattern="[a-zA-Z]+" class="form-control" name="product-title" value="<?php echo remove_junk($product['name']);?>">
                </div>
               </div>
               <div class="form-group">
@@ -107,7 +107,7 @@ if(!$product){
                       <span class="input-group-addon">
                        <i class="glyphicon glyphicon-shopping-cart"></i>
                       </span>
-                      <input type="number" min=1 class="form-control" name="product-quantity" value="<?php echo remove_junk($product['quantity']); ?>">
+                      <input type="number" min="1" class="form-control" name="product-quantity" value="<?php echo remove_junk($product['quantity']); ?>">
                    </div>
                   </div>
                  </div>
@@ -118,7 +118,7 @@ if(!$product){
                       <span class="input-group-addon">
                         <i class="glyphicon glyphicon-credit-card"></i>
                       </span>
-                      <input type="number" min=0 class="form-control" name="buying-price" value="<?php echo remove_junk($product['buy_price']);?>">
+                      <input type="number" min="1" class="form-control" name="buying-price" value="<?php echo remove_junk($product['buy_price']);?>">
                       <span class="input-group-addon">.00</span>
                    </div>
                   </div>
@@ -130,7 +130,7 @@ if(!$product){
                        <span class="input-group-addon">
                          <i class="glyphicon glyphicon-credit-card"></i>
                        </span>
-                       <input type="number" min=0 class="form-control" name="saleing-price" value="<?php echo remove_junk($product['sale_price']);?>">
+                       <input type="number" min="1" class="form-control" name="saleing-price" value="<?php echo remove_junk($product['sale_price']);?>">
                        <span class="input-group-addon">.00</span>
                     </div>
                    </div>

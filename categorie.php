@@ -46,7 +46,7 @@
         <div class="panel-body">
           <form method="post" action="categorie.php">
             <div class="form-group">
-                <input type="text" class="form-control" name="categorie-name" placeholder="Nombre de la categoría" required>
+                <input type="text" pattern="[a-zA-Z]+" class="form-control" name="categorie-name" placeholder="Nombre de la categoría" required>
             </div>
             <button type="submit" name="add_cat" class="btn btn-primary">Agregar categoría</button>
         </form>

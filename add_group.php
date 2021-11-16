@@ -51,11 +51,11 @@
       <form method="post" action="add_group.php" class="clearfix">
         <div class="form-group">
               <label for="name" class="control-label">Nombre del grupo</label>
-              <input type="name" class="form-control" name="group-name" required>
+              <input type="name" pattern="[a-zA-Z]+" class="form-control" name="group-name" required>
         </div>
         <div class="form-group">
               <label for="level" class="control-label">Nivel del grupo</label>
-              <input type="number" class="form-control" name="group-level">
+              <input type="number" min="1" class="form-control" name="group-level" required>
         </div>
         <div class="form-group">
           <label for="status">Estado</label>

@@ -49,11 +49,11 @@
       <form method="post" action="edit_group.php?id=<?php echo (int)$e_group['id'];?>" class="clearfix">
         <div class="form-group">
               <label for="name" class="control-label">Nombre del grupo</label>
-              <input type="name" class="form-control" name="group-name" value="<?php echo remove_junk(ucwords($e_group['group_name'])); ?>">
+              <input type="name" pattern="[a-zA-Z]+" class="form-control" name="group-name" value="<?php echo remove_junk(ucwords($e_group['group_name'])); ?>">
         </div>
         <div class="form-group">
               <label for="level" class="control-label">Nivel del grupo</label>
-              <input type="number" min=1 max=4 class="form-control" name="group-level" value="<?php echo (int)$e_group['group_level']; ?>">
+              <input type="number" min="1" max="4" class="form-control" name="group-level" value="<?php echo (int)$e_group['group_level']; ?>">
         </div>
         <div class="form-group">
           <label for="status">Estado</label>

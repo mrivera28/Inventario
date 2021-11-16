@@ -67,7 +67,7 @@
                   <span class="input-group-addon">
                    <i class="glyphicon glyphicon-th-large"></i>
                   </span>
-                  <input type="text" class="form-control" name="product-title" placeholder="Descripción">
+                  <input type="text" class="form-control" pattern="[a-zA-Z]+" name="product-title" placeholder="Descripción" required>
                </div>
               </div>
               <div class="form-group">
@@ -100,7 +100,7 @@
                      <span class="input-group-addon">
                       <i class="glyphicon glyphicon-shopping-cart"></i>
                      </span>
-                     <input type="number" class="form-control" name="product-quantity" placeholder="Cantidad">
+                     <input type="number" min="1" class="form-control" name="product-quantity" placeholder="Cantidad" required>
                   </div>
                  </div>
                  <div class="col-md-4">
@@ -108,7 +108,7 @@
                      <span class="input-group-addon">
                        <i class="glyphicon glyphicon-credit-card"></i>
                      </span>
-                     <input type="number" class="form-control" name="buying-price" placeholder="Precio de compra">
+                     <input type="number" min="1" class="form-control" name="buying-price" placeholder="Precio de compra" required>
                      <span class="input-group-addon">.00</span>
                   </div>
                  </div>
@@ -117,7 +117,7 @@
                       <span class="input-group-addon">
                         <i class="glyphicon glyphicon-credit-card"></i>
                       </span>
-                      <input type="number" class="form-control" name="saleing-price" placeholder="Precio de venta">
+                      <input type="number" min="1" class="form-control" name="saleing-price" placeholder="Precio de venta" required>
                       <span class="input-group-addon">.00</span>
                    </div>
                   </div>

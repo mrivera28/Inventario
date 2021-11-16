@@ -52,7 +52,7 @@ if(isset($_POST['edit_cat'])){
        <div class="panel-body">
          <form method="post" action="edit_categorie.php?id=<?php echo (int)$categorie['id'];?>">
            <div class="form-group">
-               <input type="name" class="form-control" name="categorie-name" value="<?php echo remove_junk(ucfirst($categorie['name']));?>">
+               <input type="name" pattern="[a-zA-Z]+" class="form-control" name="categorie-name" value="<?php echo remove_junk(ucfirst($categorie['name']));?>">
            </div>
            <button type="submit" name="edit_cat" class="btn btn-primary">Actualizar categoría</button>
        </form>
