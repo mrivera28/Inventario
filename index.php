@@ -26,7 +26,7 @@
       <form method="post" action="auth.php" class="clearfix">
         <div class="form-group divcentrado">
               <label for="username" class="control-label">Usario</label>
-              <input type="name" class="form-control" name="username" placeholder="Usario">
+              <input pattern="[a-zA-Z]+" type="name" class="form-control" name="username" placeholder="Usario">
         </div>
         <div class="form-group">
             <label for="Password" class="control-label">Contraseña</label>
